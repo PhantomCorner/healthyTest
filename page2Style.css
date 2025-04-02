@@ -26,16 +26,10 @@ body {
   width: 100%;
   margin: 0 5%;
   padding: 20px;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 1200px) {
-  .content-wrapper {
-    margin: 0;
-    padding: 20px 5%;
-  }
-}
 header {
   text-align: center;
   padding-top: 20px;
@@ -66,7 +60,7 @@ header {
   border-radius: 10px;
   max-width: 10px;
   min-width: 10px;
-  height: auto;
+  height: 5em;
   background-color: var(--color-splitter);
 }
 .text-block {
@@ -92,17 +86,20 @@ strong {
   width: 50%;
   height: 100%;
 }
+.section-container {
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .octagon-container {
-  height: 100%;
   position: relative;
 }
 
 .octagon {
-  width: 100%;
-  height: 80%;
   position: relative;
   overflow: hidden;
-
   clip-path: polygon(
     30% 0%,
     70% 0%,
