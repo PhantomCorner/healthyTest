@@ -1,8 +1,8 @@
 :root {
   --color-blue: #203077;
-  --color-orange: orange;
-  --color-red: red;
-  --color-purple: purple;
+  --color-orange: #ea952f;
+  --color-red: #b64426;
+  --color-purple: #55396c;
   --content-size: 20px;
   --header-size: 32px;
 }
@@ -26,22 +26,6 @@ header {
   padding-bottom: 20px;
 }
 
-.bold {
-  font-weight: 900;
-}
-.blue {
-  color: var(--color-blue);
-}
-.orange {
-  background-color: var(--color-orange);
-}
-.red {
-  background-color: var(--color-red);
-}
-.purple {
-  background-color: var(--color-purple);
-}
-
 .content {
   text-align: center;
   padding-top: 10px;
@@ -58,7 +42,6 @@ header {
   flex: 0 0 30%;
   display: flex;
   font-size: var(--content-size);
-  align-items: center;
 }
 .img-content-description {
   flex: 0 0 40%;
@@ -148,4 +131,20 @@ header {
 }
 .arrow-right {
   background-image: url("./assets/SVGs/arrow-24-64.png");
+}
+
+.bold {
+  font-weight: 900;
+}
+.blue {
+  color: var(--color-blue);
+}
+.orange {
+  background-color: var(--color-orange);
+}
+.red {
+  background-color: var(--color-red);
+}
+.purple {
+  background-color: var(--color-purple);
 }
