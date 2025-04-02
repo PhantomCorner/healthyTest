@@ -32,7 +32,7 @@ header {
   font-size: var(--content-size);
 }
 .img-container {
-  min-height: 600px;
+  min-height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -82,17 +82,17 @@ header {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
-  gap: 10px;
 }
 
 .button-icon {
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f5bb30;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-image: url("./assets/SVGs/arrow-24-64.png");
   background-size: 50%;
   background-repeat: no-repeat;
@@ -147,4 +147,29 @@ header {
 }
 .purple {
   background-color: var(--color-purple);
+}
+table {
+  font-size: var(--content-size);
+  font-weight: bold;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th,
+td {
+  border: 1px solid #f2f2f2;
+  border-left: none;
+  border-right: none;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:last-child {
+  text-align: right;
+  color: var(--color-blue);
 }
