@@ -83,7 +83,10 @@ header {
 }
 
 .footer-section {
+  color: white;
   flex: 1;
+  font-size: var(--content-size);
+  text-transform: uppercase;
 }
 
 .left {
@@ -98,17 +101,17 @@ header {
   text-align: right;
 }
 
-.label {
-  text-transform: uppercase;
-}
-
-.nav-link {
-  align-items: center;
-  font-size: var(--content-size);
-  text-decoration: none;
-  color: white;
-}
-
 .arrow {
-  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.arrow-left {
+  background-image: url("./assets/SVGs/arrow-88-64.png");
+}
+.arrow-right {
+  background-image: url("./assets/SVGs/arrow-24-64.png");
 }
