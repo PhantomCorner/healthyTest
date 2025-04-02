@@ -29,7 +29,31 @@ body {
   max-width: 1300px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 480px) {
+  :root {
+    --header-size: 20px;
+    --content-size: 14px;
+    --highlight-size: 3rem;
+  }
+  .content-wrapper {
+    margin: 0;
+  }
+  .chart-container {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: row;
+    gap: 10px;
+  }
 
+  .footer-section {
+    text-align: center;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
 header {
   text-align: center;
   padding-top: 20px;
@@ -60,7 +84,7 @@ header {
   border-radius: 10px;
   max-width: 10px;
   min-width: 10px;
-  height: 5em;
+  height: 8em;
   background-color: var(--color-splitter);
 }
 .text-block {
