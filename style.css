@@ -1,5 +1,6 @@
 :root {
-  --content-color: #203077;
+  --color-blue: #203077;
+
   --content-size: 20px;
   --header-size: 32px;
 }
@@ -12,27 +13,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 header {
   text-align: center;
-  /* letter-spacing: 0.1em; */
   padding-top: 20px;
   font-size: var(--header-size);
-  font-weight: bold;
-  color: var(--content-color);
+  font-weight: 900;
+  color: var(--color-blue);
   padding-bottom: 20px;
 }
 
-.description {
-  text-align: center;
-  padding-top: 20px;
-  color: var(--content-color);
-  font-weight: bold;
+.bold {
+  font-weight: 900;
 }
+.blue {
+  color: var(--color-blue);
+}
+
 .content {
   text-align: center;
   padding-top: 10px;
-  color: var(--content-color);
+  font-size: var(--content-size);
 }
 .img-container {
   height: 500px;
@@ -48,6 +50,36 @@ header {
   margin-bottom: 10px;
   color: white;
   font-family: Arial, sans-serif;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 30px;
+  font-size: var(--content-size);
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  gap: 10px;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5bb30;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url("./assets/SVGs/arrow-24-64.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-section {
