@@ -8,7 +8,7 @@
   --footer-size: 16px;
   --content-size: 18px;
   --header-size: 32px;
-  --highlight-size: 5rem;
+  --highlight-size: 7rem;
 }
 body {
   min-width: 375px;
@@ -26,7 +26,7 @@ body {
   width: 100%;
   margin: 0 5%;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1300px;
   box-sizing: border-box;
 }
 
@@ -68,6 +68,7 @@ header {
   font-size: var(--content-size);
 }
 .highlight-num {
+  font-weight: bold;
   font-size: var(--highlight-size);
   color: var(--color-purple);
 }
