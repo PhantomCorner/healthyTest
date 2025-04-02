@@ -1,6 +1,8 @@
 :root {
   --color-blue: #203077;
-
+  --color-orange: orange;
+  --color-red: red;
+  --color-purple: purple;
   --content-size: 20px;
   --header-size: 32px;
 }
@@ -30,6 +32,15 @@ header {
 .blue {
   color: var(--color-blue);
 }
+.orange {
+  background-color: var(--color-orange);
+}
+.red {
+  background-color: var(--color-red);
+}
+.purple {
+  background-color: var(--color-purple);
+}
 
 .content {
   text-align: center;
@@ -44,7 +55,7 @@ header {
 }
 .img-content {
   padding: 10px;
-  flex: 1;
+  flex: 0 0 30%;
   display: flex;
   font-size: var(--content-size);
   align-items: center;
@@ -57,11 +68,12 @@ header {
 .img-content-chart {
   flex: 1;
   display: flex;
-  justify-content: space-around;
 }
-progress {
-  width: 80%;
-  height: 20px;
+.progress-bar {
+  height: 50px;
+  width: 0;
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
 .footer {
   display: flex;

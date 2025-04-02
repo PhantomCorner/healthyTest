@@ -31,7 +31,6 @@
       </div>
       <div class="container">
         <header>Our Commissioning Goals</header>
-
         <div class="content">
           We partner with local service providers to support people of all ages,
           genders, sexual identities, ethnicities and backgrounds inNestern
@@ -62,27 +61,27 @@
               Being a WentWest provider has improved our own service performance
             </div>
             <div class="img-content-chart">
-              <progress value="76" max="100"></progress>
-              <span class="bold">76%</span>
+              <div data-value="76" class="progress-bar orange"></div>
             </div>
+            <span class="bold">76%</span>
           </div>
           <div class="img-content">
             <div class="img-content-description">
               Being a WentWest provider has improved our own service performance
             </div>
             <div class="img-content-chart">
-              <progress value="88" max="100"></progress>
-              <span class="bold">88%</span>
+              <div data-value="88" class="progress-bar red"></div>
             </div>
+            <span class="bold">88%</span>
           </div>
           <div class="img-content">
             <div class="img-content-description">
               Being a WentWest provider has improved our own service performance
             </div>
             <div class="img-content-chart">
-              <progress value="92" max="100"></progress
-              ><span class="bold">92%</span>
+              <div data-value="92" class="progress-bar purple"></div>
             </div>
+            <span class="bold">92%</span>
           </div>
         </div>
       </div>
@@ -111,4 +110,14 @@
       <div class="arrow arrow-right"></div>
     </footer>
   </body>
+  <script>
+    window.onload = function () {
+      const progressBars = document.querySelectorAll(".progress-bar");
+
+      progressBars.forEach((bar) => {
+        const value = bar.dataset.value;
+        bar.style.width = `${value}%`;
+      });
+    };
+  </script>
 </html>
