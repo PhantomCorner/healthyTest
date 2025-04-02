@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="./page2Style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+  </head>
+  <body>
+    <div style="margin: 0 10%">
+      <header>CHILD AND FAMILY HEALTH</header>
+      <div class="container">
+        <div class="title">Kids Early Years Network</div>
+        <div class="text-block">
+          <p>
+            The Kids Early Years Network (KEYS) brings together services in
+            Western Sydney for families with young children who may need
+            additional support due to the impacts of adverse events in childhood
+            and the socio-economic determinants of health. By the time children
+            begin school in Australia, their health and developmental outcomes
+            have already been impacted by the circumstances they live in. KEYS
+            is a multi-agency program that targets the 20% of families in
+            Western Sydney with children aged 0-5 years that are at risk of poor
+            outcomes and aims to change the trajectory for the whole family.
+            KEYS is unique in that it works with the trusted service providers
+            already working with families, offering specialist knowledge and new
+            areas of expertise as adjuncts to the activities already in place.
+          </p>
+        </div>
+        <div class="text-block">
+          <p>
+            Since its inception, KEYS has worked with over 1000 services across
+            500 organisations in Western Sydney to help families achieve their
+            goals. Our KEYS partners include the Department of Communities and
+            Justice, The Sydney Children's Hospitals Network, Western Sydney
+            Local Health District and the Department of Education.
+          </p>
+          <p>
+            In the last year, KEYS has implemented a new software system that
+            has enhanced the ability of our partners to collaborate with each
+            other. To provide culturally-appropriate and holistic services in
+            Western Sydney, the team also includes a dedicated Disability
+            Specialist Navigator, employed through The Sydney Children's
+            Hospitals Network, a Housing Navigator and an identified Aboriginal
+            Navigator.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="arrow arrow-left"></div>
+      <div class="footer-section left">
+        <p>Previous</p>
+        <p>Our Region</p>
+      </div>
+      <div class="footer-section center">
+        <p>GO TO:</p>
+        <div>
+          <div style="display: inline-block" class="arrow arrow-left"></div>
+          <span>Section</span>
+          <div style="display: inline-block" class="arrow arrow-right"></div>
+        </div>
+      </div>
+
+      <div class="footer-section right">
+        <p>NEXT</p>
+        <p>Mental Health</p>
+      </div>
+      <div class="arrow arrow-right"></div>
+    </footer>
+  </body>
+  <script>
+    // once the page loaded, read the data value and make it the width of progress div
+    window.onload = function () {
+      const progressBars = document.querySelectorAll(".progress-bar");
+      progressBars.forEach((bar) => {
+        const value = bar.dataset.value;
+        bar.style.width = `${value}%`;
+      });
+    };
+  </script>
+</html>
