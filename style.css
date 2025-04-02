@@ -4,7 +4,8 @@
   --color-red: #b64426;
   --color-purple: #55396c;
   --color-gray: #43464c;
-  --content-size: 20px;
+  --content-size: 18px;
+  --footer-size: 16px;
   --header-size: 32px;
 }
 body {
@@ -103,7 +104,7 @@ header {
 .footer-section {
   color: white;
   flex: 1;
-  font-size: var(--content-size);
+  font-size: var(--footer-size);
   text-transform: uppercase;
 }
 

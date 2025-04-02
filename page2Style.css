@@ -5,10 +5,10 @@
   --color-purple: #55396c;
   --color-gray: #43464c;
   --color-splitter: #c4badf;
-
-  --content-size: 20px;
+  --footer-size: 16px;
+  --content-size: 18px;
   --header-size: 32px;
-  --highlight-size: 96px;
+  --highlight-size: 3rem;
 }
 body {
   min-width: 375px;
@@ -56,6 +56,28 @@ strong {
   font-size: var(--highlight-size);
   color: var(--color-purple);
 }
+.chart-container {
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(255, 182, 193, 1);
+  border: 2px solid rgba(255, 182, 193, 0.5);
+}
+.chart-container img {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.description div {
+  flex: 1;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -69,7 +91,7 @@ strong {
 .footer-section {
   color: white;
   flex: 1;
-  font-size: var(--content-size);
+  font-size: var(--footer-size);
   text-transform: uppercase;
 }
 
