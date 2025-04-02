@@ -39,6 +39,7 @@ body {
     margin: 0;
   }
   .chart-container {
+    max-height: 500px;
     flex-direction: column;
   }
   .footer {
@@ -113,11 +114,10 @@ strong {
 }
 .section-container {
   min-height: 600px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 10px 30px;
 }
 
 .octagon-container {
@@ -128,22 +128,24 @@ strong {
 .octagon {
   position: relative;
   overflow: hidden;
+  border-radius: 30px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
-    100% 30%,
-    100% 70%,
-    70% 100%,
-    30% 100%,
-    0% 70%,
-    0% 30%
+    90% 30%,
+    90% 70%,
+    70% 90%,
+    30% 90%,
+    10% 70%,
+    10% 30%
   );
 }
 
 .octagon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  border-radius: 30px;
 }
 
 .caption {
@@ -156,14 +158,38 @@ strong {
 .description {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
-.description div {
+
+.description-bottom {
+  background-position: center;
+  padding: 0 50px;
   flex: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("./assets/Child-and-Family/dialog.png");
 }
-.description-bottom img {
-  display: block;
+.description-bottom p {
+  text-align: center;
+  top: 25%;
+  margin-block: 0;
+  position: relative;
+  font-weight: bold;
+  color: var(--color-purple);
+  font-size: var(--content-size);
 }
+.description-bottom span {
+  position: absolute;
+  bottom: 6%;
+  font-weight: bold;
+  color: var(--color-purple);
+  font-size: var(--content-size);
+  left: 60%;
+}
+/* @media (width <1200px) {
+  .description-bottom {
+    background-image: none;
+  }
+} */
 .color-background {
   background-color: #f3f9f9;
 }
