@@ -4,8 +4,11 @@
   --color-red: #b64426;
   --color-purple: #55396c;
   --color-gray: #43464c;
+  --color-splitter: #c4badf;
+
   --content-size: 20px;
   --header-size: 32px;
+  --highlight-size: 96px;
 }
 body {
   min-width: 375px;
@@ -20,18 +23,39 @@ header {
   color: var(--color-blue);
   padding-bottom: 20px;
 }
-
 .title {
   font-size: var(--header-size);
   font-weight: bold;
   color: var(--color-blue);
 }
-
+.text-block-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.highlight-block {
+  width: 100%;
+  margin: 0 5%;
+  text-align: center;
+  font-size: var(--content-size);
+}
+.block-splitter {
+  margin: 5% 0 5% 0;
+  border: 1px solid var(--color-splitter);
+  border-radius: 10px;
+  max-width: 10px;
+  min-width: 10px;
+  background-color: var(--color-splitter);
+}
 .text-block {
   display: inline-block;
-  width: 48%;
+  width: 45%;
+  font-size: var(--content-size);
 }
-
+strong {
+  font-size: var(--highlight-size);
+  color: var(--color-purple);
+}
 .footer {
   display: flex;
   justify-content: space-between;
