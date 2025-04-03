@@ -7,6 +7,7 @@
   --color-splitter: #c4badf;
   --footer-size: 16px;
   --content-size: 18px;
+  --strong-size: 22px;
   --header-size: 32px;
   --highlight-size: 7rem;
 }
@@ -15,7 +16,13 @@ body {
   margin: 0;
   color: var(--color-gray);
 }
-
+p {
+  font-size: var(--content-size);
+}
+strong {
+  font-size: var(--stong-size);
+  font-weight: 900;
+}
 .page-container {
   display: flex;
   justify-content: center;
@@ -28,6 +35,15 @@ body {
   padding: 20px;
   max-width: 1300px;
   box-sizing: border-box;
+}
+.reference-wrapper {
+  margin: 0 5%;
+  padding: 20px;
+  border-top: 1px solid var(--color-gray);
+  box-sizing: border-box;
+}
+.reference-wrapper stong {
+  color: var(--color-purple);
 }
 @media screen and (max-width: 480px) {
   :root {
@@ -65,7 +81,7 @@ header {
 }
 .title {
   font-size: var(--header-size);
-  font-weight: bold;
+  font-weight: 900;
   color: var(--color-blue);
 }
 .text-block-container {
@@ -97,9 +113,7 @@ header {
   font-size: var(--highlight-size);
   color: var(--color-purple);
 }
-strong {
-  font-weight: bold;
-}
+
 .chart-container {
   padding: 10px;
   display: flex;
@@ -113,22 +127,40 @@ strong {
   height: 100%;
 }
 .section-container {
-  min-height: 600px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px 30px;
+  padding: 30px;
 }
 
 .octagon-container {
   position: relative;
-  width: 50%;
+  flex: 1;
 }
-
+.octagon-border {
+  border-radius: 50px;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: 12px;
+  background-color: #ffecee;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    90% 30%,
+    90% 70%,
+    70% 90%,
+    30% 90%,
+    10% 70%,
+    10% 30%
+  );
+}
 .octagon {
   position: relative;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 50px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -142,17 +174,15 @@ strong {
 }
 
 .octagon img {
+  border-radius: 50px;
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  border-radius: 30px;
+  object-fit: cover;
 }
 
 .caption {
   text-align: center;
-  margin-top: 20px;
-  font-style: italic;
-  color: #666;
+  color: var(--color-gray);
 }
 
 .description {
@@ -179,7 +209,7 @@ strong {
 }
 .description-bottom span {
   position: absolute;
-  bottom: 6%;
+  bottom: 5%;
   font-weight: bold;
   color: var(--color-purple);
   font-size: var(--content-size);
