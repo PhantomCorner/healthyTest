@@ -9,7 +9,6 @@
   --header-size: 32px;
 }
 body {
-  min-width: 375px;
   margin: 0;
   color: var(--color-gray);
 }
@@ -24,7 +23,7 @@ body {
 
   box-sizing: border-box;
 }
-@media screen and (max-width: 1200px) {
+@media (width<1300px) {
   .content-wrapper {
     margin: 0;
     padding: 0 5%;
@@ -45,12 +44,133 @@ header {
   color: var(--color-blue);
   padding-bottom: 20px;
 }
+.surrounding-container {
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+.center-item {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.octagon-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+.octagon-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.surrounding-item {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-purple);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 60px;
+}
+
+.item-0 {
+  background-image: url("./assets/SVGs/Asset\ 1.svg");
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item-1 {
+  background-image: url("./assets/SVGs/Asset\ 2.svg");
+
+  top: 15%;
+  right: 30%;
+}
+
+.item-2 {
+  background-image: url("./assets/SVGs/Asset\ 3.svg");
+
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+}
+
+.item-3 {
+  background-image: url("./assets/SVGs/Asset\ 4.svg");
+
+  bottom: 15%;
+  right: 30%;
+}
+
+.item-4 {
+  background-image: url("./assets/SVGs/Asset\ 5.svg");
+
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item-5 {
+  background-image: url("./assets/SVGs/Asset\ 6.svg");
+
+  bottom: 15%;
+  left: 30%;
+}
+
+.item-6 {
+  background-image: url("./assets/SVGs/Asset\ 7.svg");
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+
+.item-7 {
+  background-image: url("./assets/SVGs/Asset\ 8.svg");
+  top: 15%;
+  left: 30%;
+}
 
 .content {
   text-align: center;
   padding-top: 10px;
   font-size: var(--content-size);
 }
+
 .img-container {
   min-height: 400px;
   width: 100%;
